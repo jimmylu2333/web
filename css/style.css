@@ -1,6 +1,7 @@
 body{
-    pading-top:70px;
+    padding-top:60px;
 }
-speedometer{
+.speedometer{
     padding:10px;
+    overflow: hidden;
 }
