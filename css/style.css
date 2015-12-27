@@ -1,7 +1,32 @@
 body{
     padding-top:60px;
 }
-.speedometer{
-    padding:10px;
-    overflow: hidden;
+.speedometer img{
+    width:100%;
+    margin-bottom:20px;
+}
+#footer{
+    font-size: 12px;
+    font-weight:200;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height:32px;
+    display: inline-block;
+    border:1px solid #eee;
+    border-radius: 2px;
+    margin-top:20px;
+}
+
+#tagboard{
+    padding:0 15px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#degree{
+    text-align:center;
+    border: 1px solid RGB(221, 221, 221);
+    border-top: transparent;
+}
+#degree div{
+    padding:20px;
 }
