@@ -15,8 +15,119 @@
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="justgage-master/justgage.js"></script>
+    <script src="justgage-master/raphael-2.1.4.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        //调用js生成一个新的仪表盘：
+        var g1;
+        var g2;
+        window.onload = function(){
+            var g1 = new JustGage({
+                id: "g1",
+                value: getRandomInt(0, 30),
+                min: 0,
+                max: 100,
+                title: "盐度",
+                label: "percent",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g1.refresh(getRandomInt(55, 55));
+                }, 800);
+            ph();
+            temperature();
+            oxy();
+            chlorine();
+            conductance();
+        }
+        function ph(){
+            var g2 = new JustGage({
+                id: "g2",
+                value: getRandomInt(0, 4),
+                min: 0,
+                max: 14,
+                title: "PH",
+                label: "Ph",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g2.refresh(getRandomInt(6, 6));
+                }, 800);
+        }      
+        function temperature(){
+            var g3 = new JustGage({
+                id: "g3",
+                value: getRandomInt(25, 26),
+                min: 0,
+                max: 50,
+                title: "温度",
+                label: "Celsius",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g3.refresh(getRandomInt(20, 20));
+                }, 800);
+        }   
+        
+        function oxy(){
+            var g4 = new JustGage({
+                id: "g4",
+                value: getRandomInt(7, 7),
+                min: 0,
+                max: 10,
+                title: "含氧量",
+                label: "MG/L",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g3.refresh(getRandomInt(6, 6));
+                }, 800);
+        }     
+        function chlorine(){
+            var g5 = new JustGage({
+                id: "g5",
+                value: getRandomInt(50, 51),
+                min: 0,
+                max: 100,
+                title: "氯度",
+                label: "percent",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g3.refresh(getRandomInt(6, 6));
+                }, 800);
+        } 
+        
+                function conductance(){
+            var g6 = new JustGage({
+                id: "g6",
+                value: getRandomInt(50, 51),
+                min: 0,
+                max: 100,
+                title: "电导率",
+                label: "percent",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+            setInterval(function() {
+                  g3.refresh(getRandomInt(6, 6));
+                }, 800);
+        } 
+        
+</script>
 
     
 </head>
@@ -42,16 +153,39 @@
     
      <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
-            <div class="col-md-4 col-sm-6 speedometer"><div></div></div>
+            <div class="col-md-12" id="meter">
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g1" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g2" class="meter">
+                        </div>		                              
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g3" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g4" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g5" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g6" class="meter">
+                        </div>		          
+                </div>
+                
+            </div>
             
             <div class="col-md-12" id="tagboard">
 
                   <!-- Nav tabs -->
+                  
+                <h1 class="col-md-12 panel_title">参考数据</h1>
                   <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">罗非鱼</a></li>
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">草鱼</a></li>
@@ -152,22 +286,8 @@
 
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab">2015.12</a></li>
-                    <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab">2015.11</a></li>
-                    <li role="presentation"><a href="#time1510" aria-controls="time" role="tab" data-toggle="tab">2015.10</a></li>
-                    <li role="presentation"><a href="#time1509" aria-controls="time" role="tab" data-toggle="tab">2015.09</a></li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        more<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" id="time_panel">
-                          <li><a href="#">2015.08</a></li>
-                          <li><a href="#">2015.07</a></li>
-                          <li><a href="#">2015.06</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">查看全部</a></li>
-                        </ul>
-                    </li><!--more button-->
+                    <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab">月视图</a></li>
+                    <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab">日视图</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -222,55 +342,6 @@
                         </div>
                     </div>
                         
-                    <div role="tabpanel" class="tab-pane" id="time1510">
-                        <div class="container-fluid">
-                            <div class="row chart">
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div role="tabpanel" class="tab-pane" id="time1509">
-                        <div class="container-fluid">
-                            <div class="row chart">
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     
                   </div><!-- Tab panes end -->
 
