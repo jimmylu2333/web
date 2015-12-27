@@ -49,12 +49,12 @@
             <div class="col-md-2 col-sm-4 col-xs-6 speedometer"><img src="image/natgic.jpg" alt="pic"></div>
             <div class="col-md-2 col-sm-4 col-xs-6 speedometer"><img src="image/natgic.jpg" alt="pic"></div>
             
-               <div class="col-md-12" id="tagboard">
+            <div class="col-md-12" id="tagboard">
 
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">罗非鱼</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">月梅鱼</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">草鱼</a></li>
                     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">哈哈鱼</a></li>
                     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">鱼鱼鱼</a></li>
                   </ul>
@@ -63,7 +63,7 @@
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="home">
                         <div class="container-fluid">
-                            <div class="row" id="degree">
+                            <div class="row degree">
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
                                  <p>温度</p></div>
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
@@ -84,7 +84,7 @@
                     
                     <div role="tabpanel" class="tab-pane" id="profile">
                         <div class="container-fluid">
-                            <div class="row" id="degree">
+                            <div class="row degree">
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
                                  <p>温度</p></div>
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
@@ -105,7 +105,7 @@
                         
                     <div role="tabpanel" class="tab-pane" id="messages">
                         <div class="container-fluid">
-                            <div class="row" id="degree">
+                            <div class="row degree">
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
                                  <p>温度</p></div>
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
@@ -126,7 +126,7 @@
                     
                     <div role="tabpanel" class="tab-pane" id="settings">
                         <div class="container-fluid">
-                            <div class="row" id="degree">
+                            <div class="row degree">
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
                                  <p>温度</p></div>
                                 <div class="col-md-4 col-sm-6 col-xs-6"><h1>－－</h1>
@@ -147,8 +147,139 @@
                     
                   </div><!-- Tab panes end -->
 
-            </div>
-            <div class="col-md-6 col-md-offset-3" id="footer">Copyright@Guangdong Ocean University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made by Lingwo</div>
+            </div><!--tagboard end-->            
+            <div class="col-md-12" id="chart">
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab">2015.12</a></li>
+                    <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab">2015.11</a></li>
+                    <li role="presentation"><a href="#time1510" aria-controls="time" role="tab" data-toggle="tab">2015.10</a></li>
+                    <li role="presentation"><a href="#time1509" aria-controls="time" role="tab" data-toggle="tab">2015.09</a></li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        more<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" id="time_panel">
+                          <li><a href="#">2015.08</a></li>
+                          <li><a href="#">2015.07</a></li>
+                          <li><a href="#">2015.06</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">查看全部</a></li>
+                        </ul>
+                    </li><!--more button-->
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="time1512">
+                        <div class="container-fluid">
+                            <div class="row chart">
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane" id="time1511">
+                        <div class="container-fluid">
+                            <div class="row chart">
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div role="tabpanel" class="tab-pane" id="time1510">
+                        <div class="container-fluid">
+                            <div class="row chart">
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div role="tabpanel" class="tab-pane" id="time1509">
+                        <div class="container-fluid">
+                            <div class="row chart">
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-6 chart_panel">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div><!-- Tab panes end -->
+
+            </div><!--chart end-->
+            
+        </div> 
+    </div>
+            
+            <div class="col-md-6 col-md-offset-3 col-xs-12" id="footer">Copyright@Guangdong Ocean University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made by Lingwo</div>
         </div>
     </div>
 </body>
