@@ -100,8 +100,8 @@
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g6.refresh(getRandomInt(6, 6));
-                }, 800);
+//            setInterval(function() {
+//                  g6.refresh(getRandomInt(6, 6));
+//                }, 800);
         } 
         
