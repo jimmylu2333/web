@@ -6,128 +6,17 @@
     <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
         <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
+    <script src="js/jquery-2.1.4.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="justgage-master/justgage.js"></script>
     <script src="justgage-master/raphael-2.1.4.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        //调用js生成一个新的仪表盘：
-        var g1;
-        var g2;
-        window.onload = function(){
-            var g1 = new JustGage({
-                id: "g1",
-                value: getRandomInt(0, 30),
-                min: 0,
-                max: 100,
-                title: "盐度",
-                label: "percent",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g1.refresh(getRandomInt(55, 55));
-                }, 800);
-            ph();
-            temperature();
-            oxy();
-            chlorine();
-            conductance();
-        }
-        function ph(){
-            var g2 = new JustGage({
-                id: "g2",
-                value: getRandomInt(0, 4),
-                min: 0,
-                max: 14,
-                title: "PH",
-                label: "Ph",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g2.refresh(getRandomInt(6, 6));
-                }, 800);
-        }      
-        function temperature(){
-            var g3 = new JustGage({
-                id: "g3",
-                value: getRandomInt(25, 26),
-                min: 0,
-                max: 50,
-                title: "温度",
-                label: "Celsius",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g3.refresh(getRandomInt(20, 20));
-                }, 800);
-        }   
-        
-        function oxy(){
-            var g4 = new JustGage({
-                id: "g4",
-                value: getRandomInt(7, 7),
-                min: 0,
-                max: 10,
-                title: "含氧量",
-                label: "MG/L",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
-                }, 800);
-        }     
-        function chlorine(){
-            var g5 = new JustGage({
-                id: "g5",
-                value: getRandomInt(50, 51),
-                min: 0,
-                max: 100,
-                title: "氯度",
-                label: "percent",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
-                }, 800);
-        } 
-        
-                function conductance(){
-            var g6 = new JustGage({
-                id: "g6",
-                value: getRandomInt(50, 51),
-                min: 0,
-                max: 100,
-                title: "电导率",
-                label: "percent",
-                levelColors: [
-                    "#222222"
-                ]   
-            });
-            setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
-                }, 800);
-        } 
-        
-</script>
+
 
     
 </head>
@@ -283,7 +172,6 @@
 
             </div><!--tagboard end-->            
             <div class="col-md-12" id="chart">
-
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab">月视图</a></li>
@@ -295,6 +183,18 @@
                     <div role="tabpanel" class="tab-pane active" id="time1512">
                         <div class="container-fluid">
                             <div class="row chart">
+                               
+                               
+                               
+                                <div class="col-md-12 time_select">
+
+                                </div>   <!--time selector end-->
+                               
+                               
+                               
+                                
+                                
+                                
                                 <div class="col-md-4 col-sm-6 chart_panel">
                                     <div></div>
                                 </div>
@@ -320,6 +220,13 @@
                     <div role="tabpanel" class="tab-pane" id="time1511">
                         <div class="container-fluid">
                             <div class="row chart">
+                               
+                               
+                                <div class="col-md-12 time_select">
+                                    
+                                </div><!--time selection end-->
+                                
+                                
                                 <div class="col-md-4 col-sm-6 chart_panel">
                                     <div></div>
                                 </div>
@@ -353,5 +260,7 @@
             <div class="col-md-6 col-md-offset-3 col-xs-12" id="footer">Copyright@Guangdong Ocean University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made by Lingwo</div>
         </div>
     </div>
+<script src="js/speedometer.js"></script>
+
 </body>
 </html>
