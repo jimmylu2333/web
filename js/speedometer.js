@@ -68,7 +68,7 @@
                 ]   
             });
             setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
+                  g4.refresh(getRandomInt(5, 6));
                 }, 800);
         }     
         function chlorine(){
@@ -84,7 +84,7 @@
                 ]   
             });
             setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
+                  g5.refresh(getRandomInt(6, 6));
                 }, 800);
         } 
         
@@ -101,7 +101,7 @@
                 ]   
             });
             setInterval(function() {
-                  g3.refresh(getRandomInt(6, 6));
+                  g6.refresh(getRandomInt(6, 6));
                 }, 800);
         } 
         

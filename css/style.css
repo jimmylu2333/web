@@ -76,4 +76,9 @@ body{
 
 .time_select{
     margin-top:20px;
+    text-align:center;
+    
+}
+.time_select div label{
+    line-height:32px;
 }

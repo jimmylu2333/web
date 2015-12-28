@@ -5,25 +5,24 @@
     <title>test</title>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="datetimepicker/css/bootstrap-datetimepicker.min.css">
 </head>
 <body>
-    <div class="well">
-  <div id="datetimepicker2" class="input-append">
-    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
-    <span class="add-on">
-      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-      </i>
-    </span>
-  </div>
-</div>
-<script type="text/javascript">
-  $(function() {
-    $('#datetimepicker2').datetimepicker({
-      language: 'en',
-      pick12HourFormat: true
-    });
-  });
-</script>
+        <input type="text" id="datetimepicker1" value="2015">
+        <script type="text/javascript">
+          $(function() {
+            $('#datetimepicker1').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii',
+                autoClose:true
+            });
+          });
+        </script>
+    </div>
 </body>
 </html>
