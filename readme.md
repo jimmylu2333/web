@@ -4,3 +4,5 @@ speedometer内的图片替换为组件
 仪表组件名
 ＃extjs
 组件名
+
+#test merge
