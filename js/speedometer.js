@@ -4,18 +4,18 @@
         window.onload = function(){
             var g1 = new JustGage({
                 id: "g1",
-                value: getRandomInt(0, 30),
+                value: getRandomInt(30, 40),
                 min: 0,
-                max: 100,
+                max: 45,
                 title: "盐度",
                 label: "percent",
                 levelColors: [
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g1.refresh(getRandomInt(55, 55));
-                }, 800);
+//            setInterval(function() {
+//                  g1.refresh(getRandomInt(55, 55));
+//                }, 800);
             ph();
             temperature();
             oxy();
@@ -25,7 +25,7 @@
         function ph(){
             var g2 = new JustGage({
                 id: "g2",
-                value: getRandomInt(0, 4),
+                value: getRandomInt(6,8),
                 min: 0,
                 max: 14,
                 title: "PH",
@@ -34,58 +34,58 @@
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g2.refresh(getRandomInt(6, 6));
-                }, 800);
+//            setInterval(function() {
+//                  g2.refresh(getRandomInt(6, 6));
+//                }, 800);
         }      
         function temperature(){
             var g3 = new JustGage({
                 id: "g3",
-                value: getRandomInt(25, 26),
+                value: getRandomInt(18, 19),
                 min: 0,
-                max: 50,
+                max: 30,
                 title: "温度",
                 label: "Celsius",
                 levelColors: [
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g3.refresh(getRandomInt(20, 20));
-                }, 800);
+//            setInterval(function() {
+//                  g3.refresh(getRandomInt(20, 20));
+//                }, 800);
         }   
         
         function oxy(){
             var g4 = new JustGage({
                 id: "g4",
-                value: getRandomInt(7, 7),
+                value: getRandomInt(4, 9),
                 min: 0,
                 max: 10,
                 title: "含氧量",
-                label: "MG/L",
+                label: "mg/L",
                 levelColors: [
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g4.refresh(getRandomInt(5, 6));
-                }, 800);
+//            setInterval(function() {
+//                  g4.refresh(getRandomInt(5, 6));
+//                }, 800);
         }     
         function chlorine(){
             var g5 = new JustGage({
                 id: "g5",
-                value: getRandomInt(50, 51),
+                value: getRandomInt(1,4),
                 min: 0,
                 max: 100,
                 title: "氯度",
-                label: "percent",
+                label: "％",
                 levelColors: [
                     "#222222"
                 ]   
             });
-            setInterval(function() {
-                  g5.refresh(getRandomInt(6, 6));
-                }, 800);
+//            setInterval(function() {
+//                  g5.refresh(getRandomInt(6, 6));
+//                }, 800);
         } 
         
                 function conductance(){

@@ -7,12 +7,11 @@ body{
     font-weight:200;
     text-align: center;
     letter-spacing: 1px;
-    line-height:32px;
+    line-height:20px;
     display: inline-block;
     border:1px solid #eee;
     border-radius: 2px;
-    margin-top:20px;
-    
+    margin-top:20px;   
 }
 
 #tagboard{
@@ -54,12 +53,13 @@ body{
 }
 */
 .meter{
-    width:320px;
+    width:280px;
     height:256px;
     margin:0 auto;
-    margin-bottom:20px;
+/*    margin-bottom:20px;*/
 }
      
+/*
 .meter p {
       width: 320px;
       text-align: center;
@@ -73,12 +73,17 @@ body{
       border-radius:5px;
       box-shadow: 0px 0px 10px #202020;
   }
+*/
 
 .time_select{
     margin-top:20px;
-    text-align:center;
-    
+    text-align:right;
 }
 .time_select div label{
     line-height:32px;
+}
+
+.canvas-holder1 {
+    width: 300px;
+    margin: 20px auto;
 }
