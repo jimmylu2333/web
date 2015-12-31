@@ -265,22 +265,46 @@
                                     </div>
                                 </div><!--time selection end-->
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas7" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas8" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas9" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas10" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas11" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="canvas12" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,7 +351,58 @@
     
     
     
-    
+        addEvent(function(){
+		var ctx1 = document.getElementById("canvas1").getContext("2d");
+		window.myLine = new Chart(ctx1).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx2 = document.getElementById("canvas2").getContext("2d");
+		window.myLine = new Chart(ctx2).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx3 = document.getElementById("canvas3").getContext("2d");
+		window.myLine = new Chart(ctx3).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx4 = document.getElementById("canvas4").getContext("2d");
+		window.myLine = new Chart(ctx4).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx5 = document.getElementById("canvas5").getContext("2d");
+		window.myLine = new Chart(ctx5).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx6 = document.getElementById("canvas6").getContext("2d");
+		window.myLine = new Chart(ctx6).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx7 = document.getElementById("canvas7").getContext("2d");
+		window.myLine = new Chart(ctx7).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx8 = document.getElementById("canvas8").getContext("2d");
+		window.myLine = new Chart(ctx8).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx9 = document.getElementById("canvas9").getContext("2d");
+		window.myLine = new Chart(ctx9).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx10 = document.getElementById("canvas10").getContext("2d");
+		window.myLine = new Chart(ctx10).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx11 = document.getElementById("canvas11").getContext("2d");
+		window.myLine = new Chart(ctx11).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx12 = document.getElementById("canvas12").getContext("2d");
+		window.myLine = new Chart(ctx12).Line(lineChartData, {
+			responsive: true
+		});
+            
+	}
+);
     
 		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 		var lineChartData = {
@@ -359,34 +434,7 @@
 
         
         
-        addEvent(function(){
-		var ctx1 = document.getElementById("canvas1").getContext("2d");
-		window.myLine = new Chart(ctx1).Line(lineChartData, {
-			responsive: true
-		});
-        var ctx2 = document.getElementById("canvas2").getContext("2d");
-		window.myLine = new Chart(ctx2).Line(lineChartData, {
-			responsive: true
-		});
-        var ctx3 = document.getElementById("canvas3").getContext("2d");
-		window.myLine = new Chart(ctx3).Line(lineChartData, {
-			responsive: true
-		});
-        var ctx4 = document.getElementById("canvas4").getContext("2d");
-		window.myLine = new Chart(ctx4).Line(lineChartData, {
-			responsive: true
-		});
-        var ctx5 = document.getElementById("canvas5").getContext("2d");
-		window.myLine = new Chart(ctx5).Line(lineChartData, {
-			responsive: true
-		});
-        var ctx6 = document.getElementById("canvas6").getContext("2d");
-		window.myLine = new Chart(ctx6).Line(lineChartData, {
-			responsive: true
-		});
-            
-	}
-);
+
 
 
 </script>
