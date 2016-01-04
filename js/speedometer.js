@@ -8,6 +8,7 @@
                 min: 0,
                 max: 45,
                 title: "盐度",
+                decimals:1,
                 label: "percent",
                 levelColors: [
                     "#222222"
@@ -29,6 +30,7 @@
                 min: 0,
                 max: 14,
                 title: "PH",
+                decimals:1,
                 label: "Ph",
                 levelColors: [
                     "#222222"
@@ -45,6 +47,7 @@
                 min: 0,
                 max: 30,
                 title: "温度",
+                decimals:1,
                 label: "Celsius",
                 levelColors: [
                     "#222222"
@@ -62,6 +65,7 @@
                 min: 0,
                 max: 10,
                 title: "含氧量",
+                decimals:1,
                 label: "mg/L",
                 levelColors: [
                     "#222222"
@@ -78,6 +82,7 @@
                 min: 0,
                 max: 100,
                 title: "氯度",
+                decimals:1,
                 label: "％",
                 levelColors: [
                     "#222222"
@@ -95,6 +100,7 @@
                 min: 0,
                 max: 100,
                 title: "电导率",
+                decimals:1,
                 label: "percent",
                 levelColors: [
                     "#222222"
