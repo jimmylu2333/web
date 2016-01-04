@@ -189,7 +189,7 @@
                                 <div class="col-md-12 time_select">
                                     <div class="form-group">
                                         <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4  control-label">选择月份</label>
-                                        <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7" data-date="2015-12-28T05:25:07Z" data-date-format="MM yyyy" data-link-field="dtp_input1">
+                                        <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7"  data-date-format="MM yyyy" data-link-field="dtp_input1">
                                             <input class="form-control" size="16" type="text" value="" readonly>
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                                         </div>
@@ -250,7 +250,7 @@
                                 <div class="col-md-12 time_select">
                                     <div class="form-group">
                                         <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4 control-label">选择日期</label>
-                                        <div class="input-group date form_date col-md-2 col-sm-3 col-xs-7" data-date="2015-12-28T05:25:07Z" data-date-format="yyyy mm dd" data-link-field="dtp_input1">
+                                        <div class="input-group date form_date col-md-2 col-sm-3 col-xs-7" data-date-format="yyyy mm dd" data-link-field="dtp_input1">
                                             <input class="form-control" size="16" type="text" value="" readonly>
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                                         </div>
@@ -323,7 +323,7 @@
     $('.form_month').datetimepicker({
         language:  'zh-CN',
         weekStart: 1,
-        todayBtn:  1,
+        todayBtn:  0,
 		autoclose: 1,
 		todayHighlight: 1,
 		startView: 3,
@@ -350,36 +350,36 @@
         responsive: true
     };
     var data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         datasets: [
             {
                 label: "My First dataset",
                 fillColor: "rgba(220,220,220,0.2)",
                 pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40]
+                data: [65, 59, 80, 81, 56, 55, 40,33,44,55,66,77]
             },
             {
                 label: "My Second dataset",
                 fillColor: "rgba(151,187,205,0.2)",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: [28, 48, 40, 19, 86, 27, 90,33,44,55,66,77]
             }
         ]
     };
     var data2 = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","00",],
         datasets: [
             {
                 label: "My First dataset",
                 fillColor: "rgba(220,220,220,0.2)",
                 pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [40, 59, 80, 81, 56, 55, 40]
+                data: [40, 59, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,33,44,33]
             },
             {
                 label: "My Second dataset",
                 fillColor: "rgba(151,187,205,0.2)",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [40, 48, 40, 19, 86, 27, 90]
+                data: [40, 48, 40, 19, 86, 27, 90, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,40, 59,55,66,77]
             }
         ]
     };
