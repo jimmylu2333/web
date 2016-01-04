@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>WaterMonitor</title>
     <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
-        <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <script src="js/Chart.min.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="justgage-master/justgage.js"></script>
+    <script src="justgage-master/raphael-2.1.4.min.js"></script>
+    <script src="js/speedometer.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 
 
 
@@ -170,11 +174,11 @@
                   </div><!-- Tab panes end -->
 
             </div><!--tagboard end-->            
-            <div class="col-md-12" id="chart">
+        <div class="col-md-12" id="chart">
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab">月视图</a></li>
-                        <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab">日视图</a></li>
+                        <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab" id="tab1">月视图</a></li>
+                        <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab" id="tab2">日视图</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -193,24 +197,46 @@
                                     </div>
                                 </div>   <!--time selector end-->
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div class="canvas-holder1">
-                                        <convas id="chart1" width="300" height="30" />
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart11" height="450" width="600"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart12" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart13" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart14" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart15" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart16" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -232,22 +258,46 @@
                                     </div>
                                 </div><!--time selection end-->
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart21" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart22" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart23" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart24" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart25" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div></div>
+                                    <div style="width:100%">
+                                        <div>
+                                            <canvas id="myChart26" height="450" width="600"></canvas>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -267,14 +317,7 @@
             </div>
         </div>
     </div>
-<script src="js/addEvent.js"></script>   
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="justgage-master/justgage.js"></script>
-<script src="justgage-master/raphael-2.1.4.min.js"></script>
-<script src="js/speedometer.js"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
 <script type="text/javascript">
     /*time selector*/
     $('.form_month').datetimepicker({
@@ -300,6 +343,103 @@
     });/*time selector end*/
     
     
+     $(function() {
+    'use strict';
+    var line_chart_options = {
+        scaleGridLineColor : "rgba(0,0,0,.05)",
+        responsive: true
+    };
+    var data = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(220,220,220,0.2)",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [65, 59, 80, 81, 56, 55, 40]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(151,187,205,0.2)",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [28, 48, 40, 19, 86, 27, 90]
+            }
+        ]
+    };
+    var data2 = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(220,220,220,0.2)",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [40, 59, 80, 81, 56, 55, 40]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(151,187,205,0.2)",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [40, 48, 40, 19, 86, 27, 90]
+            }
+        ]
+    };
+    var ctx11 = $("#myChart11").get(0).getContext("2d");
+    var myLineChart11 = new Chart(ctx11).Line(data, line_chart_options);
+    var ctx12 = $("#myChart12").get(0).getContext("2d");
+    var myLineChart12 = new Chart(ctx12).Line(data, line_chart_options);
+    var ctx13 = $("#myChart13").get(0).getContext("2d");
+    var myLineChart13 = new Chart(ctx13).Line(data, line_chart_options);
+    var ctx14 = $("#myChart14").get(0).getContext("2d");
+    var myLineChart14 = new Chart(ctx14).Line(data, line_chart_options);
+    var ctx15 = $("#myChart15").get(0).getContext("2d");
+    var myLineChart15 = new Chart(ctx15).Line(data, line_chart_options);
+    var ctx16 = $("#myChart16").get(0).getContext("2d");
+    var myLineChart16 = new Chart(ctx16).Line(data, line_chart_options);
+    var ctx21 = $("#myChart21").get(0).getContext("2d");
+    var myLineChart21;
+    var ctx22 = $("#myChart22").get(0).getContext("2d");
+    var myLineChart22;
+    var ctx23 = $("#myChart23").get(0).getContext("2d");
+    var myLineChart23;
+    var ctx24 = $("#myChart24").get(0).getContext("2d");
+    var myLineChart24;
+    var ctx25 = $("#myChart25").get(0).getContext("2d");
+    var myLineChart25;
+    var ctx26 = $("#myChart26").get(0).getContext("2d");
+    var myLineChart26;
+    $('#tab1').on('shown.bs.tab', function (e) {
+        myLineChart21.destroy();
+        myLineChart22.destroy();
+        myLineChart23.destroy();
+        myLineChart24.destroy();
+        myLineChart25.destroy();
+        myLineChart26.destroy();
+        myLineChart11 = new Chart(ctx11).Line(data, line_chart_options);
+        myLineChart12 = new Chart(ctx12).Line(data, line_chart_options);
+        myLineChart13 = new Chart(ctx13).Line(data, line_chart_options);
+        myLineChart14 = new Chart(ctx14).Line(data, line_chart_options);
+        myLineChart15 = new Chart(ctx15).Line(data, line_chart_options);
+        myLineChart16 = new Chart(ctx16).Line(data, line_chart_options);
+    });
+    $('#tab2').on('shown.bs.tab', function (e) {
+        myLineChart11.destroy();
+        myLineChart12.destroy();
+        myLineChart13.destroy();
+        myLineChart14.destroy();
+        myLineChart15.destroy();
+        myLineChart16.destroy();
+        myLineChart21 = new Chart(ctx21).Line(data2, line_chart_options);
+        myLineChart22 = new Chart(ctx22).Line(data2, line_chart_options);
+        myLineChart23 = new Chart(ctx23).Line(data2, line_chart_options);
+        myLineChart24 = new Chart(ctx24).Line(data2, line_chart_options);
+        myLineChart25 = new Chart(ctx25).Line(data2, line_chart_options);
+        myLineChart26 = new Chart(ctx26).Line(data2, line_chart_options);
+    });
+});
+        
+        
+
+
 
 </script>
 

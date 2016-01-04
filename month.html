@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <script src="js/Chart.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/addEvent.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/init.css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <style>
+            
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+           
+        <!--time selector-->
+        <div class="col-md-12 time_select">
+            <div class="form-group">
+                <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4  control-label">选择月份</label>
+                <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7" data-date="2015-12-28T05:25:07Z" data-date-format="MM yyyy" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input1" value="" /><br/>
+            </div>
+        </div>   
+        <!--time selector end-->
+           
+           
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas1" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas2" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas3" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas4" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas5" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 chart_panel">
+                <div style="width:100%">
+                    <div>
+                        <canvas id="canvas6" height="450" width="600"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        /*time selector*/
+        $('.form_month').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  0,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 3,
+            minView:3,
+            forceParse: 0,
+            showMeridian: 0
+        });
+        
+    //js code of chart.js
+        addEvent(function(){
+		var ctx1 = document.getElementById("canvas1").getContext("2d");
+		window.myLine = new Chart(ctx1).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx2 = document.getElementById("canvas2").getContext("2d");
+		window.myLine = new Chart(ctx2).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx3 = document.getElementById("canvas3").getContext("2d");
+		window.myLine = new Chart(ctx3).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx4 = document.getElementById("canvas4").getContext("2d");
+		window.myLine = new Chart(ctx4).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx5 = document.getElementById("canvas5").getContext("2d");
+		window.myLine = new Chart(ctx5).Line(lineChartData, {
+			responsive: true
+		});
+        var ctx6 = document.getElementById("canvas6").getContext("2d");
+		window.myLine = new Chart(ctx6).Line(lineChartData, {
+			responsive: true
+		});
+    
+	}
+);
+    
+		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+		var lineChartData = {
+			labels : ["January","February","March","April","May","June","July","August","September","October","November","December"],
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+                
+				{
+					label: "My Second dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+		}
+    </script>
+</body>
+</html>
