@@ -39,7 +39,19 @@ function addEvent(func){
 //调用js生成一个新的仪表盘：
         var g1;
         var g2;
-        addEvent(function(){
+        addEvent(
+            function(){
+            salinity();
+            ph();
+            temperature();
+            oxy();
+            chlorine();
+            conductance();
+            }
+        );
+
+//盐度
+        function salinity(){
             var g1 = new JustGage({
                 id: "g1",
                 value: getRandomInt(30, 40),
@@ -52,13 +64,9 @@ function addEvent(func){
                     "#222222"
                 ]   
             });
-            ph();
-            temperature();
-            oxy();
-            chlorine();
-            conductance();
-        });
-        
+        }
+
+//ph
         function ph(){
             var g2 = new JustGage({
                 id: "g2",
@@ -72,7 +80,9 @@ function addEvent(func){
                     "#222222"
                 ]   
             });
-        }      
+        }
+
+//温度
         function temperature(){
             var g3 = new JustGage({
                 id: "g3",
@@ -88,6 +98,7 @@ function addEvent(func){
             });
         }   
         
+//含氧量
         function oxy(){
             var g4 = new JustGage({
                 id: "g4",
@@ -102,6 +113,8 @@ function addEvent(func){
                 ]   
             });
         }     
+
+//氯度
         function chlorine(){
             var g5 = new JustGage({
                 id: "g5",
@@ -117,6 +130,7 @@ function addEvent(func){
             });
         } 
         
+//电导率
                 function conductance(){
             var g6 = new JustGage({
                 id: "g6",
