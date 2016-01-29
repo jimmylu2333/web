@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WaterMonitor</title>
+    <title>水质监控系统</title>
     <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
@@ -26,52 +26,32 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+             
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><img src="#" alt="Brand">水质监控系统</a>
+                
+              <a class="navbar-brand" href="index.html"><img src="image/logo.jpg" alt="Brand">水质监控系统</a>
             </div>
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">后台管理 <span class="sr-only">(current)</span></a></li>
+                  
+                <li><a href="panel.html" class="btn" target="_self">仪表盘 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" class="btn active" target="
+                ">参考数据 <span class="sr-only">(current)</span></a></li>
+                <li><a href="linechart.html" class="btn" target="_self">线型图 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" class="btn" target="_self">后台管理 <span class="sr-only">(current)</span></a></li>
               </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </div>
     </div>
     
      <div class="container-fluid"> 
         <div class="row">
-            <div class="col-md-12" id="meter"><!--speedometer-->
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g1" class="meter">
-                        </div>		          
-                </div>
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g2" class="meter">
-                        </div>		                              
-                </div>
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g3" class="meter">
-                        </div>		          
-                </div>
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g4" class="meter">
-                        </div>		          
-                </div>
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g5" class="meter">
-                        </div>		          
-                </div>
-                <div class="col-md-4 col-sm-6 speedometer">
-                        <div id="g6" class="meter">
-                        </div>		          
-                </div>
-                
-            </div>
-            
             <div class="col-md-12" id="tagboard">
 
                   <!-- Nav tabs -->
@@ -173,140 +153,6 @@
                   </div><!-- Tab panes end -->
 
             </div><!--tagboard end-->            
-        <div class="col-md-12" id="chart">
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab" id="tab1">年视图</a></li>
-                        <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab" id="tab2">月视图</a></li>
-                  </ul>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="time1512">
-                        <div class="container-fluid">
-                            <div class="row chart">
-                                <div class="col-md-12 time_select">
-                                    <div class="form-group">
-                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4  control-label">选择年份</label>
-                                        <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7"  data-date-format="yyyy" data-link-field="dtp_input1">
-                                            <input class="form-control" size="16" type="text" value="" readonly>
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-                                        </div>
-                                        <input type="hidden" id="dtp_input1" value="" /><br/>
-                                    </div>
-                                </div>   <!--time selector end-->
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart11" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart12" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart13" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart14" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart15" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart16" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div role="tabpanel" class="tab-pane" id="time1511">
-                        <div class="container-fluid">
-                            <div class="row chart">
-                                <div class="col-md-12 time_select">
-                                    <div class="form-group">
-                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4 control-label">选择月期</label>
-                                        <div class="input-group date form_date col-md-2 col-sm-3 col-xs-7" data-date-format="yyyy-mm" data-link-field="dtp_input1">
-                                            <input class="form-control" size="16" type="text" value="" readonly>
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-                                        </div>
-                                        <input type="hidden" id="dtp_input1" value="" /><br/>
-                                    </div>
-                                </div><!--time selection end-->
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart21" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart22" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart23" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart24" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart25" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 chart_panel">
-                                    <div style="width:100%">
-                                        <div>
-                                            <canvas id="myChart26" height="450" width="600"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-                    
-                  </div><!-- Tab panes end -->
-
-            </div><!--chart end-->
-            
         </div> 
     </div>
     
