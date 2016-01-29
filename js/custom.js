@@ -11,30 +11,7 @@ function addEvent(func){
         }
 }     
 
-//日期选择组建代码
-    /*time selector*/
-    $('.form_month').datetimepicker({
-        language:  'zh-CN',
-        weekStart: 1,
-        todayBtn:  0,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 3,
-        minView:3,
-		forceParse: 0,
-        showMeridian: 0
-    });
-	$('.form_date').datetimepicker({
-        language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
-    });/*time selector end*/
-    
+ 
 
 //调用js生成一个新的仪表盘：
         var g1;
@@ -159,21 +136,12 @@ function addEvent(func){
         datasets: [
             {
                 label: "My First dataset",
-                fillColor: "rgba(220,220,220,0.2)",
+                fillColor: "rgba(220,220,220,0.8)",
                 pointColor : "rgba(220,220,220,1)",
                 pointStrokeColor : "#fff",
                 pointHighlightFill : "#fff",
                 pointHighlightStroke : "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40,33,44,55,66,77]
-            },
-            {
-                label: "My Second dataset",
-                fillColor: "rgba(151,187,205,0.2)",
-                pointColor:"rgba(151,187,205,1)",
-                pointStrokeColor:"#fff",
-                pointHighlightFill:"#fff",
-                pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 86, 27, 90,33,44,55,66,77]
+                data: [65, 59, 80, 81, 56, 55, 40,33,44,35,66,33]
             }
         ]
     };
@@ -182,15 +150,9 @@ function addEvent(func){
         datasets: [
             {
                 label: "My First dataset",
-                fillColor: "rgba(220,220,220,0.2)",
+                fillColor: "rgba(220,220,220,0.8)",
                 pointHighlightStroke: "rgba(220,220,220,1)",
                 data: [40, 59, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,33,44,33]
-            },
-            {
-                label: "My Second dataset",
-                fillColor: "rgba(151,187,205,0.2)",
-                pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [40, 48, 40, 19, 86, 27, 90, 80, 81, 56, 55, 40,40, 59, 80, 81, 56, 55, 40,40, 59,55,66,77]
             }
         ]
     };
