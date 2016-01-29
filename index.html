@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">WaterMonitor</a>
+              <a class="navbar-brand" href="index.html"><img src="#" alt="Brand">水质监控系统</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
@@ -176,8 +176,8 @@
         <div class="col-md-12" id="chart">
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab" id="tab1">月视图</a></li>
-                        <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab" id="tab2">日视图</a></li>
+                        <li role="presentation" class="active"><a href="#time1512" aria-controls="time" role="tab" data-toggle="tab" id="tab1">年视图</a></li>
+                        <li role="presentation"><a href="#time1511" aria-controls="time" role="tab" data-toggle="tab" id="tab2">月视图</a></li>
                   </ul>
 
                   <!-- Tab panes -->
@@ -187,8 +187,8 @@
                             <div class="row chart">
                                 <div class="col-md-12 time_select">
                                     <div class="form-group">
-                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4  control-label">选择月份</label>
-                                        <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7"  data-date-format="MM yyyy" data-link-field="dtp_input1">
+                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4  control-label">选择年份</label>
+                                        <div class="input-group date form_month col-md-2 col-sm-3 col-xs-7"  data-date-format="yyyy" data-link-field="dtp_input1">
                                             <input class="form-control" size="16" type="text" value="" readonly>
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                                         </div>
@@ -248,8 +248,8 @@
                             <div class="row chart">
                                 <div class="col-md-12 time_select">
                                     <div class="form-group">
-                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4 control-label">选择日期</label>
-                                        <div class="input-group date form_date col-md-2 col-sm-3 col-xs-7" data-date-format="yyyy mm dd" data-link-field="dtp_input1">
+                                        <label for="dtp_input1" class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-2 col-xs-4 control-label">选择月期</label>
+                                        <div class="input-group date form_date col-md-2 col-sm-3 col-xs-7" data-date-format="yyyy-mm" data-link-field="dtp_input1">
                                             <input class="form-control" size="16" type="text" value="" readonly>
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                                         </div>
@@ -354,5 +354,31 @@
             </div>
         </div>
     </div>
+    <script>
+    //日期选择组建代码
+    /*time selector*/
+    $('.form_month').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 4,
+        minView:4,
+		forceParse: 0,
+        showMeridian: 0
+    });
+	$('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 3,
+		minView: 3,
+		forceParse: 0
+    });/*time selector end*/
+   
+    </script>
 </body>
 </html>
