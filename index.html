@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水质监控系统</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script src="js/Chart.min.js"></script>
+    <script src="justgage-master/justgage.js"></script>
+    <script src="justgage-master/raphael-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script src="js/custom.js"></script>
+
+
+
+    
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+             
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                
+              <a class="navbar-brand" href="index.html"><img src="image/logo.jpg" alt="Brand">水质监控系统</a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  
+                <li><a href="#" class="btn active" target="_self">仪表盘 <span class="sr-only">(current)</span></a></li>
+                <li><a href="argument.html" class="btn" target="
+                ">参考数据 <span class="sr-only">(current)</span></a></li>
+                <li><a href="linechart.html" class="btn" target="_self">线型图 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" class="btn" target="_self">后台管理 <span class="sr-only">(current)</span></a></li>
+              </ul>
+
+            </div>
+        </div>
+    </div>
+    
+     <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-md-12" id="meter">
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g1" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g2" class="meter">
+                        </div>		                              
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g3" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g4" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g5" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g6" class="meter">
+                        </div>		          
+                </div>
+                
+            </div>
+        </div> 
+    </div>
+    
+<!--  button  -->
+  <div class="container-fluid">
+      <div class="row button-row">
+           <div class="col-sm-4 col-md-4">
+                <div class="button">
+                    <span>增氧设备</span>
+                    <input type="checkbox" id="checkbox1" class="checkbox">
+                    <div class="checkbox-wrapper">
+                        <label for="checkbox1" class="checkbox-label"></label>
+                    </div>
+                </div>
+
+           </div>
+           <div class="col-sm-4 col-md-4">
+                <div class="button">
+                    <span>温度补偿</span>
+                    <input type="checkbox" id="checkbox2" class="checkbox">
+                    <div class="checkbox-wrapper">
+                        <label for="checkbox2" class="checkbox-label"></label>
+                    </div>
+                </div>
+
+           </div>
+           <div class="col-sm-4 col-md-4">
+                <div class="button">
+                    酸碱调节
+                    <input type="checkbox" id="checkbox3" class="checkbox">
+                    <div class="checkbox-wrapper">
+                        <label for="checkbox3" class="checkbox-label"></label>
+                    </div>
+                </div>
+           </div>
+      </div>
+   </div>
+    
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 " id="footer">
+               Copyright@Guangdong Ocean University Made by Lingwo
+            </div>
+        </div>
+    </div>
+</body>
+</html>
