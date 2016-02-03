@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台管理</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<style>
+.margin-top80{
+	margin-top:80px;
+}
+.btn-circle{
+	border-radius:80px;
+	width:150px;
+	height:150px;
+}
+.btn-circle1{
+	border-radius:3px;
+	width:2px;
+	height:2px;
+}
+.gray-color{
+	color:#999;
+}
+.margin-left100{
+	margin-left:100px;
+}
+.margin-left70{
+	margin-left:70px;
+}
+.margin-left30{
+	margin-left:30px;
+}
+.margin-left15{
+	margin-left:15px;
+}
+.form-style{
+	width:80%;
+	margin-left:10%;
+	min-height:250px;
+	height:auto;
+	border:1px solid #ddd;
+	padding:20px;
+}
+.onetwothree{
+	width:70%;
+	margin-left:10%;
+}
+.padding8-30{
+	padding:8px 30px;
+}
+.fontsize{
+	font-size:20px;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+    	<!--顶部欢迎页面-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>-->
+              <a class="navbar-brand" href="#"><img src="image/logo.png" alt="logo icon"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                <li class="fontsize"><a href="#" >欢迎来到水质监控界面</a></li>
+                <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+              <!--<form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>-->
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">联系方式</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于我们 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        
+        
+        
+        <!--一级页面导航、三个按钮-->
+        <div class="container">
+        	<div class="row-fluid margin-top80"></div>
+            	<div class="col-md-2">
+                	<input type="button" class="btn btn-success btn-circle" value="参考数据"/>
+                    <br>
+                    <img src="photos/circle2.png" class="margin-left70"/> 
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                	<input type="button" class="btn btn-danger btn-circle" value="待参考"/>
+                    <br>
+                    <img src="photos/circle3.png" class="margin-left70"/>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                	<input type="button" class="btn btn-primary btn-circle" value="待参考"/>
+                    <br>
+                    <img src="photos/circle3.png" class="margin-left70"/>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+                        
+
+        <!--默认首页输入参考数据-->
+        <div class="container-fluid">
+            <div class="onetwothree">
+              <center>
+              
+              </center>
+            </div>
+            <br>
+        	<form class="form-inline form-style">
+            <fieldset>
+            	<!--<legend>参考数据</legend>-->
+            	<select class="form-control">
+                	<option value="请选择">请选择鱼类</option>
+                	<option value="罗非鱼">罗非鱼</option>
+                    <option value="草鱼">草鱼</option>
+                    <option value="哈哈鱼">哈哈鱼</option>
+                    <option value="鱼鱼鱼">鱼鱼鱼</option>
+                </select>
+                <select class="form-control margin-left30">
+                	<option value="请选择">请选择参数</option>
+                	<option value="温度">温度</option>
+                    <option value="氯度">氯度</option>
+                    <option value="盐度">盐度</option>
+                    <option value="PH值">PH值</option>
+                    <option value="溶氧度">溶氧度</option>
+                    <option value="电导率">电导率</option>
+                </select>
+                <br><br>
+                <p class="gray-color">以下为参考数据</p>
+                <br>
+                <div class="form-group">
+                  <label for="example1">最大值</label>&nbsp;&nbsp;
+                  <input type="text" class="form-control" id="example1" placeholder="请输入最大值">
+                </div>
+                <div class="form-group margin-left100">
+                  <label for="example2">最小值</label>&nbsp;&nbsp;
+                  <input type="text" class="form-control" id="example2" placeholder="请输入最小值">
+                </div>
+                <br><br><br>
+                <div class="form-group">
+                	<input type="button" class="btn btn-primary padding8-30" value="取消"/>
+                    <input type="button" class="btn margin-left15 padding8-30" value="保存"/>
+                    <input type="button" class="btn margin-left15 padding8-30" value="应用"/>
+                </div>
+                
+            </fieldset>
+            </form>
+        </div>
+    </div>
+<script src="Jquery/jquery-1.9.1.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+</body>
+</html>
