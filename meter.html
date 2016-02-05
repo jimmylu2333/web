@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>水质监控系统</title>
-    <meta http-equiv="refresh" content="2;url=meter.html" />
     <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
@@ -11,6 +10,16 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script src="js/Chart.min.js"></script>
+    <script src="justgage-master/justgage.js"></script>
+    <script src="justgage-master/raphael-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script src="js/custom.js"></script>
+
+
+
     
 </head>
 <body>
@@ -29,8 +38,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                   
-                <li><a href="#" class="btn active" target="_self">首页<span class="sr-only">(current)</span></a></li>
-                <li><a href="meter.html" class="btn" target="_self">实时监测<span class="sr-only">(current)</span></a></li>
+                <li><a href="index.html" class="btn" target="_self">首页<span class="sr-only">(current)</span></a></li>
+                <li><a href="#" class="btn active" target="_self">实时监测<span class="sr-only">(current)</span></a></li>
                 <li><a href="control.html" class="btn" target="_self">设备控制<span class="sr-only">(current)</span></a></li>
                 <li><a href="argument.html" class="btn" target="_self">养殖参考<span class="sr-only">(current)</span></a></li>
                 <li><a href="linechart.html" class="btn" target="_self">历史视图<span class="sr-only">(current)</span></a></li>
@@ -40,12 +49,38 @@
             </div>
         </div>
     </div>
-
-    <div class="centerDiv">
-        <p>欢迎进入广东海洋大学水质监控站点</p>
+    
+     <div class="container-fluid"> 
+        <div class="row meter-hg">
+            <div class="col-md-12" id="meter">
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g1" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g2" class="meter">
+                        </div>		                              
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g3" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g4" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g5" class="meter">
+                        </div>		          
+                </div>
+                <div class="col-md-4 col-sm-6 speedometer">
+                        <div id="g6" class="meter">
+                        </div>		          
+                </div>
+                
+            </div>
+        </div> 
     </div>
-    <div class="footerPos"></div>
-   
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 " id="footer">
