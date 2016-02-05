@@ -190,6 +190,11 @@ text-align: center;
 }
 }
 
+@media screen and (max-width: 768px) and (min-width: 550px){
+    .chart_panel{
+        margin-bottom: 260px;
+    }
+}
 
 .ctrl-div{
     height:565px;
@@ -200,4 +205,25 @@ text-align: center;
     margin:auto;
     top:0;right:0;bottom:0;left:0;
     top:-29px;
+}
+
+/*欢迎语句样式*/
+.centerDiv{
+    position: absolute;
+    height: 0;
+    margin: auto;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.centerDiv p{
+    font-size:31px;
+    font-weight: 100;
+    margin-top: -10px;
+    text-align: center;
+    color:#585757;
+}
+.footerPos{
+    height:560px;
 }
