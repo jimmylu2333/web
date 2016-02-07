@@ -84,9 +84,123 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 " id="footer">
-               Copyright@Guangdong Ocean University Made by Lingwo
+               Copyright © GDOU. 2016 • All rights reserved.
             </div>
         </div>
     </div>
+    <script>
+    
+//调用js生成一个新的仪表盘：
+        var g1;
+        var g2;
+        addEvent(
+            function(){
+            salinity();
+            ph();
+            temperature();
+            oxy();
+            chlorine();
+            conductance();
+            }
+        );
+
+//盐度
+        function salinity(){
+            var g1 = new JustGage({
+                id: "g1",
+                value: getRandomInt(30, 40),
+                min: 0,
+                max: 45,
+                title: "盐度",
+                decimals:1,
+                label: "percent",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        }
+
+//ph
+        function ph(){
+            var g2 = new JustGage({
+                id: "g2",
+                value: getRandomInt(6,8),
+                min: 0,
+                max: 14,
+                title: "PH",
+                decimals:1,
+                label: "Ph",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        }
+
+//温度
+        function temperature(){
+            var g3 = new JustGage({
+                id: "g3",
+                value: getRandomInt(18, 19),
+                min: 0,
+                max: 30,
+                title: "温度",
+                decimals:1,
+                label: "Celsius",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        }   
+        
+//含氧量
+        function oxy(){
+            var g4 = new JustGage({
+                id: "g4",
+                value: getRandomInt(4, 9),
+                min: 0,
+                max: 10,
+                title: "含氧量",
+                decimals:1,
+                label: "mg/L",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        }     
+
+//氯度
+        function chlorine(){
+            var g5 = new JustGage({
+                id: "g5",
+                value: getRandomInt(1,4),
+                min: 0,
+                max: 100,
+                title: "氯度",
+                decimals:1,
+                label: "％",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        } 
+        
+//电导率
+                function conductance(){
+            var g6 = new JustGage({
+                id: "g6",
+                value: getRandomInt(50, 51),
+                min: 0,
+                max: 100,
+                title: "电导率",
+                decimals:1,
+                label: "percent",
+                levelColors: [
+                    "#222222"
+                ]   
+            });
+        } 
+
+
+    </script>
 </body>
 </html>

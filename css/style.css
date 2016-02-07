@@ -132,8 +132,7 @@ body{
             font-family: "heiti SC";
             font-weight: 100;
             line-height: 57px;
-            padding: 0 22px;
-            margin-left:18%;
+            margin:0 auto;
         }
         .checkbox-label::before,
         .checkbox-label::after{
@@ -157,7 +156,13 @@ body{
             box-shadow:inset 1px 12px 2px 0 #0D90F2 ;
         }
         .checkbox-label::after{
+            content:"o";
             right:-33px;
+            line-height: 24px;
+            text-align: center;
+            color: #999;
+            -webkit-box-shadow: inset 0 0 1px 0 #A3A3A3,inset 0 1px 3px 0 #9F9F9F,inset 1px 12px 2px 0 #F4F4F4;
+            box-shadow: inset 0 0 1px 0 #A3A3A3,inset 0 1px 3px 0 #9F9F9F,inset 1px 12px 2px 0 #F4F4F4;
         }
         .button-row{
             background-color: #fff ;
@@ -171,6 +176,7 @@ body{
         font-size: 18px;
         color:#777;
         text-shadow: 0 1px 0 rgba(255,255,255,.25);
+        white-space: nowrap;
     }
 
     /*给导航栏的btn active增强样式*/
@@ -190,16 +196,16 @@ text-align: center;
 }
 }
 
-@media screen and (max-width: 768px) and (min-width: 550px){
-    .chart_panel{
-        margin-bottom: 260px;
-    }
-}
 
 .ctrl-div{
     height:565px;
 }
-.pos{
+.ctrl-div,
+#tagboard,
+#chart{
+    margin-top: 15px;
+}
+.centerPos{
     position:absolute;
     height:0;
     margin:auto;
@@ -226,4 +232,29 @@ text-align: center;
 }
 .footerPos{
     height:560px;
+}
+
+
+/*media queries*/
+@media screen and (max-width:768px){
+    .centerDiv p{
+    font-size:15px;
+    font-weight: 100;
+    margin-top: -10px;
+    text-align: center;
+    color:#585757;
+    }
+    .button{
+        padding-left: 54px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .button{
+        padding-left: 74px;
+    }    
+}
+@media screen and (max-width: 768px) and (min-width: 550px){
+    .chart_panel{
+        margin-bottom: 260px;
+    }
 }
