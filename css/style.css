@@ -247,14 +247,26 @@ text-align: center;
     .button{
         padding-left: 54px;
     }
+    .control-label{
+        white-space:nowrap;
+    }
 }
 @media screen and (min-width: 769px) and (max-width: 992px){
     .button{
         padding-left: 74px;
     }    
 }
+@media screen and (min-width: 993px){
+    .button{
+        padding-left: 74px;
+    }    
+}
+
 @media screen and (max-width: 768px) and (min-width: 550px){
     .chart_panel{
         margin-bottom: 260px;
     }
+}
+@media screen and (width: 320px){
+    .meter{position: relative;left:-10px;}
 }
